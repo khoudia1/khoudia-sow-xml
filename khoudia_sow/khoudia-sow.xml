@@ -1,0 +1,29 @@
+<Syllabus>
+    <cours code="INF 4131">
+        <description>
+            <intitule>Systéme d'Information</intitule>
+            <UE>Informatique</UE>
+            <CT>
+                <credit>6</credit>
+                <coeficient>2</coeficient>
+                <volumeHoraire>
+                    <TPE>30</TPE>
+                    <CM>15</CM>
+                    <TDTP>15<TDTP>
+                </volumeHoraire>
+            </CT>
+            <semestre>1</semestre>
+            <niveau>Master</niveau>
+            <prerequis>ACSI, ACSOO</prerequis>
+        </description>
+        <enseignants nombre="1">
+            <enseignant>
+                <prenom>François</prenom>
+                <nom>Kali</nom>
+                <adresseBureau>Vcn, Batiment Administration UFR SET<adresseBureau>
+                <couriel>françois.kali@univ-thies.sn</couriel>
+                <heureBureau>12h-14h</heureBureau>
+            </enseignant>
+        </enseignants>
+    </cours>
+</Syllabus>

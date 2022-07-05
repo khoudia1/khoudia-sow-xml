@@ -1,0 +1,56 @@
+<!xml versio="1.0" encoding="utf-8"?>
+<xs:schema xmlns:"https://www.w3.org/2001/XMLschema">
+<xs:complextype name="chargeType">
+    <xs:sequence>
+        <xs:element name="coeficient" type="xs:positiveInteger"/>
+        <xs:element name="credit" type="xs:positiveInteger"/>
+        <xs:element name="volume">
+            <xs:complextype>
+                <xs:all>
+                    <xs:element name="CM" type="xs:positiveInteger"/>
+                    <xs:element name="TDTP" type="xs:positiveInteger"/>
+                    <xs:element name="TPE" type="xs:positiveInteger"/>
+                </xs:all>
+            </xs:complextype>
+        </xs:element>
+    </xs:sequence>
+</xs:complextype>
+<xs:complextype name="descriptionType">
+    <xs:sequence>
+        <xs:element name="intitule" type="xs:string"/>
+        <xs:element name="UE" type="xs:string"/>
+        <xs:element name="charge" type="xs:chargeType"/>
+        <xs:element name="semestre" type="xs:string"/>
+        <xs:element name="niveau" type="xs:string"/>
+        <xs:element name="prerequis" type="xs:string"/>
+    </xs:sequence>
+</xs:complextype>positiveInteger
+<xs:complextype name="enseignantType">
+    <xs:sequence>
+        <xs:element name="prenom" type="xs:string"/>
+        <xs:element name="nom" type="xs:string"/>
+        <xs:element name="adresseBureau" type="xs:string"/>
+        <xs:element name="couriel" type="xs:string"/>
+        <xs:element name="heureBureau" type="xs:string"/>
+    </xs:sequence>
+</xs:complextype>
+<xs:complextype name="enseignantsType">
+    <xs:sequence>
+        <xs:attribute name="nombre" type="xs:positiveInteger"/>
+        <xs:element name="enseignant" type="xs:enseignantType"/>
+    </xs:sequence>
+</xs:complextype>
+<xs:complextype name="coursType">
+    <xs:sequence>
+        <xs:attribute name="code" type="xs:string"/>
+        <xs:element name="description" type="xs:descriptionType"/>
+    </xs:sequence>
+</xs:complextype>
+<xsd:element name= "syllabus">
+	<xsd:complexType>
+		<xsd:sequence>
+			<xsd:element name="cours" type = "xs:coursType"/>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:element>
+</xs:schema>

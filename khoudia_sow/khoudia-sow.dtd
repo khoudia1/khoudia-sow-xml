@@ -1,0 +1,23 @@
+<!ELEMENT Syllabus (cours+)>
+<!ELEMENT cours (description,enseignants)>
+<!ELEMENT   enseignants (enseignant+)>
+    <!ATTLIST enseignants nombre CDATA #REQUIRED>
+    <!ELEMENT enseignant (prenom,nom,adresseBureau,couriel,heureBureau)>
+        <!ELEMENT prenom CDATA>
+        <!ELEMENT nom CDATA>
+        <!ELEMENT adresseBureau CDATA>
+        <!ELEMENT couriel CDATA>
+        <!ELEMENT heureBureau CDATA>
+    <!ELEMENT description (intitule, UE,CT,semestre,niveau,prerequis)>
+        <!ELEMENT intitule CDATA>
+        <!ELEMENT UE CDATA>
+        <!ELEMENT semestre CDATA>
+        <!ELEMENT niveau CDATA>
+        <!ELEMENT prerequis CDATA>
+        <!ELEMENT CT (credit, coeficient, volumeHoraire)>
+            <!ELEMENT credit CDATA>
+            <!ELEMENT coeficient CDATA> 
+            <!ELEMENT volumeHoraire(TPE, CM,TDTP)>
+                <!ELEMENT TPE CDATA>
+                <!ELEMENT CM CDATA>
+                <!ELEMENT TDTP CDATA>
